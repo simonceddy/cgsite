@@ -16,7 +16,7 @@ function Router() {
                 {label}
               </PageHeading>
             </Page>
-)}
+          )}
         />
       ))}
     </Routes>
