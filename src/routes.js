@@ -1,36 +1,36 @@
-import { createRef } from "react";
-import About from "./pages/About";
-import Books from "./pages/Books";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
+import { createRef } from 'react';
+import About from './pages/About';
+import Books from './pages/Books';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
 
 const routes = [
   {
     key: 'home',
     label: 'Home',
     path: '',
-    el: <Home />,
+    element: <Home />,
     nodeRef: createRef(),
   },
   {
     key: 'about',
     label: 'About',
     path: 'about',
-    el: <About />,
+    element: <About />,
     nodeRef: createRef(),
   },
   {
     key: 'books',
     label: 'Books',
     path: 'books',
-    el: <Books />,
+    element: <Books />,
     nodeRef: createRef(),
   },
   {
     key: 'contact',
     label: 'Contact',
     path: 'contact',
-    el: <Contact />,
+    element: <Contact />,
     nodeRef: createRef(),
   },
 ];

@@ -1,9 +1,7 @@
+import PageContainer from '../containers/PageContainer';
+
 function Contact() {
-  return (
-    <div>
-      Contact
-    </div>
-  );
+  return (<PageContainer slug="contact" />);
 }
 
 export default Contact;

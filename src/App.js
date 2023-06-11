@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import { APP_TITLE } from './consts';
 import routes from './routes';
 import CSSTransition from './containers/CSSTransition';
+import Footer from './components/Footer';
 
 function App() {
   const outlet = useOutlet();
@@ -30,12 +31,13 @@ function App() {
             classNames="page"
             unmountOnExit
           >
-            <div ref={nodeRef} className="page flex-1 flex flex-col justify-start items-center">
+            <div ref={nodeRef} className="page flex-1 col justify-start items-center">
               {outlet}
             </div>
           </CSSTransition>
         </SwitchTransition>
       </Content>
+      <Footer />
     </Layout>
   );
 }

@@ -1,9 +1,7 @@
+import PageContainer from '../containers/PageContainer';
+
 function About() {
-  return (
-    <div>
-      About
-    </div>
-  );
+  return (<PageContainer slug="about" />);
 }
 
 export default About;
