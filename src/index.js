@@ -1,16 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import './styles';
 import App from './App';
+import routes from './routes';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createHashRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: routes.map((route) => ({
+      index: route.path === '/',
+      path: route.path === '/' ? undefined : route.path,
+      element: route.element,
+    }))
+  }
+]);
+
 root.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
