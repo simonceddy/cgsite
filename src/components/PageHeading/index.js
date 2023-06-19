@@ -1,6 +1,6 @@
 function PageHeading({ children }) {
   return (
-    <h2 className="font-bold font-serif text-4xl my-2 px-2">
+    <h2 className="font-bold font-cursive text-3xl my-2 px-2">
       {children}
     </h2>
   );

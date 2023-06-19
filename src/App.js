@@ -20,6 +20,9 @@ function App() {
         <AppHeading>
           {APP_TITLE}
         </AppHeading>
+        <div className="text-3xl font-bold text-pastel-green font-cursive">
+          Writing in Bass Coast
+        </div>
         <Nav />
       </Header>
       <Content>
@@ -27,11 +30,11 @@ function App() {
           <CSSTransition
             key={location.pathname}
             nodeRef={nodeRef}
-            timeout={100}
+            timeout={60}
             classNames="page"
             unmountOnExit
           >
-            <div ref={nodeRef} className="page flex-1 col justify-start items-center">
+            <div ref={nodeRef} className="page flex-1 w-auto col justify-start items-center">
               {outlet}
             </div>
           </CSSTransition>
